@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# **CodeLearn**  
+![Logo](https://img.c3dt.com/b2xHTklreTA4eWtGM3RHcFdJeUJrZz09)  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![License](https://img.shields.io/badge/license-MIT-blue) 
+![Status](https://img.shields.io/badge/status-active-success) 
+![Node.js](https://img.shields.io/badge/node.js-v16.0+-green) 
+![React](https://img.shields.io/badge/react-v18.0+-blue)
 
-## Available Scripts
+## 📚 Введение  
+**CodeLearn** — это веб-приложение для изучения языков программирования.  
 
-In the project directory, you can run:
+Проект позволяет:  
+- Изучать основные концепции популярных языков программирования (JavaScript, Python, C++ и др.);  
+- Выполнять интерактивные задания и тесты;  
+- Отслеживать прогресс обучения в удобном интерфейсе.  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠 Необходимые условия для использования  
+Перед использованием убедитесь, что у вас установлено:  
+1. **Node.js** версии 16.0 и выше.  
+2. **npm** или **yarn** для управления зависимостями.  
+3. Современный веб-браузер (например, Google Chrome).  
+4. Установленный **Git**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Установка  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1. Склонируйте репозиторий  
+```bash
+git clone https://github.com/ваш_проект/codelearn.git  
+cd codelearn
+```
+### 2. Установите зависимости 
+```bash
+npm install  
+# или
+yarn install  
+```
+### 3. Запустите сервер разработки
+```bash
+npm run dev  
+# или
+yarn dev   
+```
+## 🖥 Порядок использования 
+1. Регистрация/Вход: Создайте аккаунт или войдите в существующий.  
+2. Выбор курса: Выберите язык программирования, который хотите изучать. 
+3. Прохождение уроков: Читайте теоретические материалы и выполняйте практические задания.
+4. Анализ прогресса: Просматривайте свои достижения и статистику.
+## Пример команды для выполнения тестов:
+```bash
+npm run test
+```
