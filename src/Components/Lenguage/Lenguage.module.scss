@@ -1,0 +1,31 @@
+.lenguageBox{
+  font-family: "Open Sans", sans-serif;
+  width: 300px;
+  cursor: pointer;
+  box-shadow: 0px 0px 21px 0px rgba(34, 60, 80, 0.19);
+  border-radius: 20px;
+  transition: all 0.3s ease-out;
+  margin-bottom: 40px;
+  .boxContent{
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
+  img{
+    width: 300px;
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+  }
+  h4{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  p{
+    font-size: 14px;
+    margin: 0;
+  }
+  &:hover{
+    transform: translateY(-5px);
+  }
+}
