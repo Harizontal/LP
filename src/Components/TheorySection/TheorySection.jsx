@@ -78,7 +78,7 @@ function TheorySection({ data, tasks, name_language }) {
         taskData && taskData[currentIndex] && taskData[currentIndex].id_task;
       if (taskId) {
         const response = await fetch(
-          `http://localhost:3001/api/answers?id_task=${taskId}`
+          `http://localhost:3001/answers?id_task=${taskId}`
         );
         const data = await response.json();
         setAnswers(data);

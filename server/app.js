@@ -1,63 +1,55 @@
 const express = require('express');
 const cors = require('cors');
-const mysql = require('mysql2/promise');
+const swaggerDocs = require('./swagger');
 
 const app = express();
-const port = 3001;
-
-const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'kurs'
-});
 
 app.use(cors());
 app.use(express.json());
 
 // Подключение маршрутов
-const languagesRoutes = require('./languageService');
-const tasksRoutes = require('./taskService');
-const theoryRoutes = require('./theoryService');
-const answersRoutes = require('./answersService');
-const usersRoutes = require('./userService');
-const coursesRoutes = require('./courseService');
-const lessonsRoutes = require('./lessonsService');
-const lessonMaterialsRoutes = require('./lessonsMaterialsService');
-const quizzesRoutes = require('./quizzesService');
-const quizQuestionsRoutes = require('./quizQuestionsService');
-const userProgressRoutes = require('./progressService');
-const subscriptionsRoutes = require('./subscriptionService');
-const notificationsRoutes = require('./notificationsService');
-const userSettingsRoutes = require('./settingsService');
-const courseReviewsRoutes = require('./courseService');
-const userQuizResultsRoutes = require('./userQuizResultService');
-const tagsRoutes = require('./tagService');
-const lessonTagsRoutes = require('./lessonsTagsService');
-const achievementCriteriaRoutes = require('./AchievementCriteriaService');
-const userAchievementsRoutes = require('./userAchievementService');
+const languagesRoutes = require('./routes/languageRoutes.js');
+const tasksRoutes = require('./routes/taskRoutes.js');
+const theoryRoutes = require('./routes/theoryRoutes.js');
+const answersRoutes = require('./routes/answersRoutes.js');
+const usersRoutes = require('./routes/userRoutes.js');
+const coursesRoutes = require('./routes/courseRoutes.js');
+const lessonsRoutes = require('./routes/lessonsRoutes.js');
+const lessonMaterialsRoutes = require('./routes/lessonsMaterialsRoutes.js');
+const quizzesRoutes = require('./routes/quizzesRoutes.js');
+const quizQuestionsRoutes = require('./routes/quizQuestionsRoutes.js');
+const userProgressRoutes = require('./routes/userProgressRoutes.js');
+const subscriptionsRoutes = require('./routes/subscriptionRoutes.js');
+const notificationsRoutes = require('./routes/notificationsRoutes.js');
+const userSettingsRoutes = require('./routes/userProgressRoutes.js');
+const courseReviewsRoutes = require('./routes/courseReviewRoutes.js');
+const userQuizResultsRoutes = require('./routes/userQuizResultRoutes.js');
+const tagsRoutes = require('./routes/tagRoutes.js');
+const lessonTagsRoutes = require('./routes/lessonsTagsRoutes.js');
+const achievementCriteriaRoutes = require('./routes/achievementCriteriaRoutes.js');
+const userAchievementsRoutes = require('./routes/userAchievementRoutes.js');
 
-app.use('/api', languagesRoutes(pool));
-app.use('/api', tasksRoutes(pool));
-app.use('/api', theoryRoutes(pool));
-app.use('/api', answersRoutes(pool));
-app.use('/api', usersRoutes(pool));
-app.use('/api', coursesRoutes(pool));
-app.use('/api', lessonsRoutes(pool));
-app.use('/api', lessonMaterialsRoutes(pool));
-app.use('/api', quizzesRoutes(pool));
-app.use('/api', quizQuestionsRoutes(pool));
-app.use('/api', userProgressRoutes(pool));
-app.use('/api', subscriptionsRoutes(pool));
-app.use('/api', notificationsRoutes(pool));
-app.use('/api', userSettingsRoutes(pool));
-app.use('/api', courseReviewsRoutes(pool));
-app.use('/api', userQuizResultsRoutes(pool));
-app.use('/api', tagsRoutes(pool));
-app.use('/api', lessonTagsRoutes(pool));
-app.use('/api', achievementCriteriaRoutes(pool));
-app.use('/api', userAchievementsRoutes(pool));
+app.use('/languages', languagesRoutes);
+app.use('/tasks', tasksRoutes);
+app.use('/theory', theoryRoutes);
+app.use('/answers', answersRoutes);
+app.use('/users', usersRoutes);
+app.use('/courses', coursesRoutes);
+app.use('/lessons', lessonsRoutes);
+app.use('/lessonMaterials', lessonMaterialsRoutes);
+app.use('/quizzes', quizzesRoutes);
+app.use('/quizQuestions', quizQuestionsRoutes);
+app.use('/userProgress', userProgressRoutes);
+app.use('/subscriptions', subscriptionsRoutes);
+app.use('/notifications', notificationsRoutes);
+app.use('/userSettings', userSettingsRoutes);
+app.use('/courseReviews', courseReviewsRoutes);
+app.use('/userQuizResults', userQuizResultsRoutes);
+app.use('/tags', tagsRoutes);
+app.use('/lessonTags', lessonTagsRoutes);
+app.use('/achievementCriteria', achievementCriteriaRoutes);
+app.use('/userAchievements', userAchievementsRoutes);
 
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
+swaggerDocs(app);
+
+module.exports = app;

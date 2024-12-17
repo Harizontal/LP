@@ -19,16 +19,18 @@ function Header() {
 
   useEffect(() => {
     const fetchTheoryAndTasks = async () => {
-      try {
-        const [theoryResponse, tasksResponse] = await Promise.all([
-          axios.get(`http://localhost:3001/api/theory?id_languages=${selectedLanguageId}`),
-          axios.get('http://localhost:3001/api/tasks'),
-        ]);
+      if (selectedLanguageId !== null) {
+        try {
+          const [theoryResponse, tasksResponse] = await Promise.all([
+            axios.get(`http://localhost:3001/courses?id_language=${selectedLanguageId}`),
+            axios.get('http://localhost:3001/tasks'),
+          ]);
 
-        setTheoryData(theoryResponse.data);
-        setTaskData(tasksResponse.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
+          setTheoryData(theoryResponse.data);
+          setTaskData(tasksResponse.data);
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
       }
     };
 

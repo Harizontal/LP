@@ -8,7 +8,7 @@ function ListLenguagePrograming({LanguageClick}) {
 
   React.useEffect(() => {
     try {
-      fetch("http://localhost:3001/api/languages")
+      fetch("http://localhost:3001/languages")
         .then((response) => response.json())
         .then((resdata) => setData(resdata));
     } catch (error) {
@@ -25,7 +25,7 @@ function ListLenguagePrograming({LanguageClick}) {
           {data.map((item) => (
             <Link  key={item.id_languages} to='/Theory'>
               <Language
-                id={item.id_languages}
+                id={item.id_language}
                 title={item.name}
                 description={item.description}
                 urlImage={item.photo_url}
